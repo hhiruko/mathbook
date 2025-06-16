@@ -8,7 +8,13 @@
         <script defer src="https://cdn.jsdelivr.net/npm/mathlive"></script>
     </head>
     <body>
-        <math-field id="writer"></math-field>
+        <div id="editor">
+            <math-field id="writer"></math-field>
+        </div>
+        <div id="notebook">
+            <button id="add-button">Add Page</button>
+            <div id="pages"></div>
+        </div>
         <script type="module" src="/index.js"></script>
     </body>
 </html>

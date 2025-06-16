@@ -1,3 +1,42 @@
 math-field {
     width: 100%;
+    min-height: 1000px;
+    display: none;
+}
+
+#editor {
+    min-height: 1000px;
+}
+
+#notebook {
+    display: flex;
+    gap: 20px;
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding: 10px;
+    z-index: 10;
+    border-top: 1px solid #ccc;
+}
+
+#add-button {
+    min-width: 100px;
+}
+
+#pages {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.page {
+    min-width: 100px;
+    background-color: lightblue;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
 }

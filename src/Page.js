@@ -1,14 +1,6 @@
-import { Storage } from "./Storage";
-
 export class Page {
-    constructor(guid = crypto.randomUUID(), storage = Storage) {
-        this.guid = guid;
+    constructor(storage) {
         this.storage = storage;
-
-        this.#setWriter();
-    }
-
-    #setWriter() {
         this.writer = document.getElementById('writer');
         const keybindings = [
             {
@@ -21,13 +13,25 @@ export class Page {
             }
         ];
         this.writer.keybindings = [...this.writer.keybindings, ...keybindings];
+    }
+
+    set(number = Date.now()) {
+        this.number = number;
+        this.#setWriter();
+    }
+
+    #setWriter() {
+        this.writer.style.display = 'block';
+        
         this.writer.addEventListener('input', () => {
-            this.storage.set(this.guid, this.writer.value);
+            this.storage.set(this.number, this.writer.value);
         });
 
-        const value = this.storage.get(this.guid);
+        const value = this.storage.get(this.number);
         if(value !== null){
             this.writer.value = value;
+        } else {
+            this.writer.value = '';
         }
     }
 }

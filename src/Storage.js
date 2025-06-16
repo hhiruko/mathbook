@@ -14,4 +14,14 @@ export class Storage {
     static clear() {
         localStorage.clear();
     }
+
+    static keys() {
+        const keys = [];
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            keys.push(parseInt(key));
+        }
+        keys.sort((a,b) => a - b);
+        return keys;
+    }
 }
