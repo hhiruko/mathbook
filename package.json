@@ -1,0 +1,32 @@
+{
+  "name": "mathbook",
+  "version": "1.0.0",
+  "description": "A simple, clean digital notebook for writing, organizing, and exploring mathematical equations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests yet.\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hhiruko/mathbook.git"
+  },
+  "keywords": [
+    "math",
+    "notebook",
+    "equations",
+    "math",
+    "input",
+    "math",
+    "editor",
+    "calculus"
+  ],
+  "author": "hhiruko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hhiruko/mathbook/issues"
+  },
+  "homepage": "https://github.com/hhiruko/mathbook#readme",
+  "dependencies": {
+    "mathlive": "^0.105.3"
+  }
+}
