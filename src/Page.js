@@ -2,6 +2,7 @@ export class Page {
     constructor(storage) {
         this.storage = storage;
         this.writer = document.getElementById('writer');
+        this.writer.smartMode = 'on';
         const keybindings = [
             {
                 key: 'space',
@@ -29,9 +30,10 @@ export class Page {
 
         const value = this.storage.get(this.number);
         if(value !== null){
+            console.log(value);
             this.writer.value = value;
         } else {
-            this.writer.value = '';
+            this.writer.value = '\\displaylines{\\phantom{0}}';
         }
     }
 }
