@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link rel="icon" href="/mathbook/assets/favicon-BVIq6b63.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
+
+        <title>MathBook</title>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/mathlive"></script>
+      <script type="module" crossorigin src="/mathbook/assets/index-B9cLtCoV.js"></script>
+      <link rel="stylesheet" crossorigin href="/mathbook/assets/index-BSq2CifI.css">
+    </head>
+    <body>
+        <div id="editor">
+            <math-field id="writer"></math-field>
+            <div id="frontpage">
+                <h1>Mathbook <a id="src-code" href="https://github.com/hhiruko/mathbook"></a></h1>
+                <p>Mathbook is a simple, interactive notebook for writing, organizing, and managing math notes and formulas, with a clean, responsive interface and page-based navigation.</p>
+                <blockquote>All your data is saved in your browser. If you clear the cache, your data will be lost.</blockquote>
+                <p>Dependencies:</p>
+                <table>
+                    <thead>
+                        <th>Name</th>
+                        <th>Src</th>
+                        <th>Descripton</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://cortexjs.io/mathfield/">Mathfield</a></td>
+                            <td>jsdelivr</td>
+                            <td>Visual math input field</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://watercss.kognise.dev/">Water.css</a></td>
+                            <td>jsdelivr</td>
+                            <td>Tiny, classless CSS framework</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://lucide.dev/">Lucide</a></td>
+                            <td>npm</td>
+                            <td>Icon library</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://vite.dev/">Vite</a></td>
+                            <td>npm</td>
+                            <td>Build tool and dev server</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="notebook">
+            <button id="home-button"></button>
+            <button id="add-button"></button>
+            <div id="pages"></div>
+        </div>
+    </body>
+</html>
