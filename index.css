@@ -13,6 +13,8 @@ button:focus {
 
 math-field {
     width: 100%;
+    background-color: var(--background-body);
+    color: var(--text-main);
 }
 
 #editor {
@@ -28,7 +30,7 @@ math-field {
     gap: 20px;
     position: sticky;
     top: 0;
-    background: white;
+    background: var(--background-body);
     z-index: 10;
     border-bottom: 1px solid var(--border);
     width: 100%;
@@ -55,7 +57,6 @@ math-field {
     min-height: 40px;
     padding: 8px;
     margin: 4px;
-    background-color: white;
     border: 2px solid var(--border);
     border-radius: 8px;
     display: flex;
@@ -66,7 +67,6 @@ math-field {
 }
 
 .page:hover {
-    background-color: white;
     border-color: var(--border);
     transform: scale(1.05);
 }
