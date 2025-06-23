@@ -25,7 +25,10 @@
                 <h1>Mathbook <a id="src-code" href="https://github.com/hhiruko/mathbook"></a></h1>
                 <p>Mathbook is a simple, interactive notebook for writing, organizing, and managing math notes and formulas, with a clean, responsive interface and page-based navigation.</p>
                 <blockquote>All your data is saved in your browser. If you clear the cache, your data will be lost.</blockquote>
-                <p>Dependencies:</p>
+                <p>To start, click on the <span id="newpage-icon"></span> button at the top of the page. This will add a blank page.</p>
+                <p>To return to this page, click on the <span id="frontpage-icon"></span> button at the top of the page.</p>
+                
+                <h2>Dependencies</h2>
                 <table>
                     <thead>
                         <th>Name</th>
@@ -55,6 +58,15 @@
                         </tr>
                     </tbody>
                 </table>
+
+                <h2>Import/Export Pages</h2>
+                <p>You can import new pages in JSON format:</p>
+                <div id="import-container">
+                    <input type="file" id="json-input" accept=".json">
+                    <button id="import" disabled>Import</button>
+                </div>
+                <p>You can export your existing pages to JSON:</p>
+                <button id="export">Export</button>
             </div>
         </div>
         <script type="module" src="/index.js"></script>

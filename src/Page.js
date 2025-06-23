@@ -30,7 +30,6 @@ export class Page {
 
         const value = this.storage.get(this.number);
         if(value !== null){
-            console.log(value);
             this.writer.value = value;
         } else {
             this.writer.value = '\\displaylines{\\phantom{0}}';

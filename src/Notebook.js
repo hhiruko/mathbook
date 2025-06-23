@@ -6,6 +6,7 @@ export class Notebook {
         this.storage = storage;
         this.pages = storage.keys();
         this.page = new Page(storage);
+        this.count = this.pages.length;
     }
 
     add() {

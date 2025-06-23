@@ -21,7 +21,7 @@ export class Storage {
             const key = localStorage.key(i);
             keys.push(parseInt(key));
         }
-        keys.sort((a,b) => a - b);
+        keys.sort((a,b) => b - a);
         return keys;
     }
 }
