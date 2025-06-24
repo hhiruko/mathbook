@@ -70,13 +70,21 @@
         <title>Mathbook</title>
 
         <script defer src="/mathbook/cdn/mathlive.js"></script>
-      <script type="module" crossorigin src="/mathbook/assets/index-CbG1OCT_.js"></script>
-      <link rel="stylesheet" crossorigin href="/mathbook/assets/index-BaYTEiHW.css">
+      <script type="module" crossorigin src="/mathbook/assets/index-DrAHQRg2.js"></script>
+      <link rel="stylesheet" crossorigin href="/mathbook/assets/index-BbJvx286.css">
     </head>
     <body>
         <div id="notebook">
             <button id="home-button"></button>
             <button id="add-button"></button>
+            <button id="trigger-delete-page-dialog"></button>
+            <dialog id="delete-page-dialog" closedby="any">
+                <p>Are you sure you want to delete this page?</p>
+                <form class="delete-dialog-form" method="dialog">
+                    <button autofocus>Cancel</button>
+                    <button id="delete-page">Delete</button>
+                </form>
+            </dialog>
             <div id="pages"></div>
         </div>
         <div id="editor">
@@ -140,7 +148,7 @@
                 </div>
                 <dialog id="delete-dialog" closedby="any">
                     <p>Are you sure you want to delete all pages?</p>
-                    <form id="delete-dialog-form" method="dialog">
+                    <form class="delete-dialog-form" method="dialog">
                         <button autofocus>Cancel</button>
                         <button id="delete">Delete</button>
                     </form>
