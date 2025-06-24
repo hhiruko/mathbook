@@ -22,6 +22,9 @@ const deleteSpan = document.getElementById('delete-icon');
 const triggerDeleteDialogButton = document.getElementById('trigger-delete-dialog');
 const deleteDialog = document.getElementById('delete-dialog');
 const deleteButton = document.getElementById('delete');
+const triggerDeletePageDialogButton = document.getElementById('trigger-delete-page-dialog');
+const deletePageDialog = document.getElementById('delete-page-dialog');
+const deletePageButton = document.getElementById('delete-page');
 
 const addIcon = createElement(FilePlus2);
 const homeIcon = createElement(BookText);
@@ -31,6 +34,7 @@ const frontpageIcon = createElement(BookText);
 const dependenciesIcon = createElement(Boxes);
 const importExportIcon = createElement(Download);
 const deleteIcon = createElement(Trash2);
+const deletePageIcon = createElement(Trash2);
 
 addButton.appendChild(addIcon);
 homeButton.appendChild(homeIcon);
@@ -40,6 +44,7 @@ frontpageSpan.appendChild(frontpageIcon);
 dependenciesSpan.appendChild(dependenciesIcon);
 importExportSpan.appendChild(importExportIcon);
 deleteSpan.appendChild(deleteIcon);
+triggerDeletePageDialogButton.appendChild(deletePageIcon);
 
 const addPage = (number, index) => {
     const page = document.createElement('button');
@@ -51,6 +56,7 @@ const addPage = (number, index) => {
         document.querySelectorAll('.active').forEach(e => e.classList.remove('active'));
         page.classList.add('active');
         frontpage.style.display = 'none';
+        triggerDeletePageDialogButton.style.display = 'block';
     });
 
     return page;
@@ -86,6 +92,7 @@ homeButton.addEventListener('click', () => {
     document.getElementById('writer').style.display = 'none';
     document.querySelectorAll('.active').forEach(e => e.classList.remove('active'));
     frontpage.style.display = 'block';
+    triggerDeletePageDialogButton.style.display = 'none';
 });
 
 jsonInput.addEventListener('change', (e) => {
@@ -152,6 +159,16 @@ triggerDeleteDialogButton.addEventListener('click', () => {
 deleteButton.addEventListener('click', (e) => {
     e.preventDefault();
     storage.clear();
+    location.reload();
+});
+
+triggerDeletePageDialogButton.addEventListener('click', () => {
+    deletePageDialog.showModal();
+});
+
+deletePageButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    storage.remove(notebook.page.number);
     location.reload();
 });
 

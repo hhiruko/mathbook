@@ -41,7 +41,7 @@ math-field {
     width: 100%;
 }
 
-#add-button, #home-button {
+#add-button, #home-button, #trigger-delete-page-dialog {
     margin-top: auto;
     margin-bottom: auto;
     padding-right: 12px;
@@ -82,13 +82,17 @@ math-field {
     padding: 20px;
 }
 
-#delete-dialog-form {
+.delete-dialog-form {
     display: flex;
     gap: 12px;
     justify-content: center;
 }
 
-#delete, #trigger-delete-dialog {
+#delete, #trigger-delete-dialog, #delete-page, #trigger-delete-page-dialog {
     background-color: var(--danger);
     color: white;
+}
+
+#trigger-delete-page-dialog {
+    display: none;
 }
