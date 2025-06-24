@@ -1,6 +1,7 @@
 :root {
     --focus: #007bff;
     --min-height: 100vh;
+    --danger: #dc3545;
 }
 
 * {
@@ -73,4 +74,21 @@ math-field {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
+}
+
+#delete-container {
+    border: 1px solid var(--danger);
+    border-radius: 4px;
+    padding: 20px;
+}
+
+#delete-dialog-form {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+#delete, #trigger-delete-dialog {
+    background-color: var(--danger);
+    color: white;
 }

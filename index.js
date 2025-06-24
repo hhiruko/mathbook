@@ -1,8 +1,9 @@
 import { Notebook } from "./src/Notebook";
 import { Storage } from "./src/Storage";
-import { createElement, FilePlus2, BookText, FolderGit2 } from 'lucide';
+import { createElement, FilePlus2, BookText, FolderGit2, Boxes, Download, Trash2 } from 'lucide';
 
-const notebook = new Notebook();
+const storage = Storage;
+const notebook = new Notebook(storage);
 let importJson = null;
 
 const addButton = document.getElementById('add-button');
@@ -15,18 +16,30 @@ const frontpageSpan = document.getElementById('frontpage-icon');
 const jsonInput = document.getElementById('json-input');
 const importButton = document.getElementById('import');
 const exportButton = document.getElementById('export');
+const dependenciesSpan = document.getElementById('dependencies-icon');
+const importExportSpan = document.getElementById('import-export-icon');
+const deleteSpan = document.getElementById('delete-icon');
+const triggerDeleteDialogButton = document.getElementById('trigger-delete-dialog');
+const deleteDialog = document.getElementById('delete-dialog');
+const deleteButton = document.getElementById('delete');
 
 const addIcon = createElement(FilePlus2);
 const homeIcon = createElement(BookText);
 const gitIcon = createElement(FolderGit2);
 const newpageIcon = createElement(FilePlus2);
 const frontpageIcon = createElement(BookText);
+const dependenciesIcon = createElement(Boxes);
+const importExportIcon = createElement(Download);
+const deleteIcon = createElement(Trash2);
 
 addButton.appendChild(addIcon);
 homeButton.appendChild(homeIcon);
 srcCode.appendChild(gitIcon);
 newpageSpan.appendChild(newpageIcon);
 frontpageSpan.appendChild(frontpageIcon);
+dependenciesSpan.appendChild(dependenciesIcon);
+importExportSpan.appendChild(importExportIcon);
+deleteSpan.appendChild(deleteIcon);
 
 const addPage = (number, index) => {
     const page = document.createElement('button');
@@ -100,12 +113,14 @@ importButton.addEventListener('click', () => {
         return;
     }
 
+    let ms = 1;
     for(let [key, value] of Object.entries(importJson)) {
-        if(Storage.get(key) !== null){
-            key = Date.now();
+        if(storage.get(key) !== null){
+            key = Date.now() + ms;
+            ms++;
         }
 
-        Storage.set(key, value);
+        storage.set(key, value);
     }
 
     location.reload();
@@ -114,8 +129,8 @@ importButton.addEventListener('click', () => {
 exportButton.addEventListener('click', () => {
     const exportJson = {};
 
-    for(let key of Storage.keys()){
-        exportJson[key] = Storage.get(key);
+    for(let key of storage.keys()){
+        exportJson[key] = storage.get(key);
     }
 
     const jsonString = JSON.stringify(exportJson, null, 2);
@@ -128,6 +143,16 @@ exportButton.addEventListener('click', () => {
     a.click();
 
     URL.revokeObjectURL(url);
+});
+
+triggerDeleteDialogButton.addEventListener('click', () => {
+    deleteDialog.showModal();
+});
+
+deleteButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    storage.clear();
+    location.reload();
 });
 
 homeButton.click();
