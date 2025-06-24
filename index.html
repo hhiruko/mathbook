@@ -11,8 +11,8 @@
         <title>MathBook</title>
 
         <script defer src="https://cdn.jsdelivr.net/npm/mathlive"></script>
-      <script type="module" crossorigin src="/mathbook/assets/index-C1d9x4wf.js"></script>
-      <link rel="stylesheet" crossorigin href="/mathbook/assets/index-Bl14KPFa.css">
+      <script type="module" crossorigin src="/mathbook/assets/index-CbG1OCT_.js"></script>
+      <link rel="stylesheet" crossorigin href="/mathbook/assets/index-BaYTEiHW.css">
     </head>
     <body>
         <div id="notebook">
@@ -29,7 +29,7 @@
                 <p>To start, click on the <span id="newpage-icon"></span> button at the top of the page. This will add a blank page.</p>
                 <p>To return to this page, click on the <span id="frontpage-icon"></span> button at the top of the page.</p>
                 
-                <h2>Dependencies</h2>
+                <h2>Dependencies <span id="dependencies-icon"></span></h2>
                 <table>
                     <thead>
                         <th>Name</th>
@@ -60,7 +60,7 @@
                     </tbody>
                 </table>
 
-                <h2>Import/Export Pages</h2>
+                <h2>Import/Export Pages <span id="import-export-icon"></span></h2>
                 <p>You can import new pages in JSON format:</p>
                 <div id="import-container">
                     <input type="file" id="json-input" accept=".json">
@@ -68,6 +68,19 @@
                 </div>
                 <p>You can export your existing pages to JSON:</p>
                 <button id="export">Export</button>
+
+                <h2>Delete Pages <span id="delete-icon"></span></h2>
+                <div id="delete-container">
+                    <p>You can delete all your pages. This process is irreversible.</p>
+                    <button id="trigger-delete-dialog">Delete</button>
+                </div>
+                <dialog id="delete-dialog" closedby="any">
+                    <p>Are you sure you want to delete all pages?</p>
+                    <form id="delete-dialog-form" method="dialog">
+                        <button autofocus>Cancel</button>
+                        <button id="delete">Delete</button>
+                    </form>
+                </dialog>
             </div>
         </div>
     </body>

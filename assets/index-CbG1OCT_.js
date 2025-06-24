@@ -1,0 +1,41 @@
+var m=n=>{throw TypeError(n)};var S=(n,e,t)=>e.has(n)||m("Cannot "+t);var y=(n,e,t)=>e.has(n)?m("Cannot add the same private member more than once"):e instanceof WeakSet?e.add(n):e.set(n,t);var f=(n,e,t)=>(S(n,e,"access private method"),t);(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))s(o);new MutationObserver(o=>{for(const r of o)if(r.type==="childList")for(const u of r.addedNodes)u.tagName==="LINK"&&u.rel==="modulepreload"&&s(u)}).observe(document,{childList:!0,subtree:!0});function t(o){const r={};return o.integrity&&(r.integrity=o.integrity),o.referrerPolicy&&(r.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?r.credentials="include":o.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function s(o){if(o.ep)return;o.ep=!0;const r=t(o);fetch(o.href,r)}})();class v{static get(e){return localStorage.getItem(e)}static set(e,t){localStorage.setItem(e,t)}static remove(e){localStorage.removeItem(e)}static clear(){localStorage.clear()}static keys(){const e=[];for(let t=0;t<localStorage.length;t++){const s=localStorage.key(t);e.push(parseInt(s))}return e.sort((t,s)=>s-t),e}}var p,E;class x{constructor(e){y(this,p);this.storage=e,this.writer=document.getElementById("writer"),this.writer.smartMode="on";const t=[{key:"space",command:["insert","\\quad "]},{key:"enter",command:["addRowAfter"]}];this.writer.keybindings=[...this.writer.keybindings,...t]}set(e=Date.now()){this.number=e,f(this,p,E).call(this)}}p=new WeakSet,E=function(){this.writer.style.display="block",this.writer.addEventListener("input",()=>{this.storage.set(this.number,this.writer.value)});const e=this.storage.get(this.number);e!==null?this.writer.value=e:this.writer.value="\\displaylines{\\phantom{0}}"};class C{constructor(e=v){this.storage=e,this.pages=e.keys(),this.page=new x(e),this.count=this.pages.length}add(){return this.page.set(),this.page.number}open(e){this.page.set(e)}delete(e){this.storage.remove(e),this.page.writer.style.display="none"}list(){return this.pages}}/**
+ * @license lucide v0.517.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const O={xmlns:"http://www.w3.org/2000/svg",width:24,height:24,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor","stroke-width":2,"stroke-linecap":"round","stroke-linejoin":"round"};/**
+ * @license lucide v0.517.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const w=([n,e,t])=>{const s=document.createElementNS("http://www.w3.org/2000/svg",n);return Object.keys(e).forEach(o=>{s.setAttribute(o,String(e[o]))}),t!=null&&t.length&&t.forEach(o=>{const r=w(o);s.appendChild(r)}),s},a=(n,e={})=>{const t="svg",s={...O,...e};return w([t,s,n])};/**
+ * @license lucide v0.517.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const I=[["path",{d:"M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"}],["path",{d:"M8 11h8"}],["path",{d:"M8 7h6"}]];/**
+ * @license lucide v0.517.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const A=[["path",{d:"M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"}],["path",{d:"m7 16.5-4.74-2.85"}],["path",{d:"m7 16.5 5-3"}],["path",{d:"M7 16.5v5.17"}],["path",{d:"M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"}],["path",{d:"m17 16.5-5-3"}],["path",{d:"m17 16.5 4.74-2.85"}],["path",{d:"M17 16.5v5.17"}],["path",{d:"M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"}],["path",{d:"M12 8 7.26 5.15"}],["path",{d:"m12 8 4.74-2.85"}],["path",{d:"M12 13.5V8"}]];/**
+ * @license lucide v0.517.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const j=[["path",{d:"M12 15V3"}],["path",{d:"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"}],["path",{d:"m7 10 5 5 5-5"}]];/**
+ * @license lucide v0.517.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const b=[["path",{d:"M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"}],["path",{d:"M14 2v4a2 2 0 0 0 2 2h4"}],["path",{d:"M3 15h6"}],["path",{d:"M6 12v6"}]];/**
+ * @license lucide v0.517.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const P=[["path",{d:"M9 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v5"}],["circle",{cx:"13",cy:"12",r:"2"}],["path",{d:"M18 19c-2.8 0-5-2.2-5-5v8"}],["circle",{cx:"20",cy:"19",r:"2"}]];/**
+ * @license lucide v0.517.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const V=[["path",{d:"M3 6h18"}],["path",{d:"M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"}],["path",{d:"M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"}],["line",{x1:"10",x2:"10",y1:"11",y2:"17"}],["line",{x1:"14",x2:"14",y1:"11",y2:"17"}]],c=v,d=new C(c);let l=null;const k=document.getElementById("add-button"),g=document.getElementById("home-button"),h=document.getElementById("pages"),D=document.getElementById("src-code"),B=document.getElementById("frontpage"),H=document.getElementById("newpage-icon"),N=document.getElementById("frontpage-icon"),R=document.getElementById("json-input"),L=document.getElementById("import"),J=document.getElementById("export"),q=document.getElementById("dependencies-icon"),F=document.getElementById("import-export-icon"),U=document.getElementById("delete-icon"),T=document.getElementById("trigger-delete-dialog"),Z=document.getElementById("delete-dialog"),G=document.getElementById("delete"),K=a(b),W=a(I),$=a(P),z=a(b),Q=a(I),X=a(A),Y=a(j),_=a(V);k.appendChild(K);g.appendChild(W);D.appendChild($);H.appendChild(z);N.appendChild(Q);q.appendChild(X);F.appendChild(Y);U.appendChild(_);const M=(n,e)=>{const t=document.createElement("button");return t.textContent=e,t.classList.add("page"),t.addEventListener("click",()=>{d.open(n),document.querySelectorAll(".active").forEach(s=>s.classList.remove("active")),t.classList.add("active"),B.style.display="none"}),t},ee=(n,e)=>{const t=M(n,e);return h.appendChild(t),t},te=(n,e)=>{const t=M(n,e);return h.insertBefore(t,h.firstChild),t};let i=d.count;d.list().forEach(n=>{ee(n,i),i--});i=d.count;k.addEventListener("click",()=>{i++;const n=d.add();te(n,i).click()});g.addEventListener("click",()=>{document.getElementById("writer").style.display="none",document.querySelectorAll(".active").forEach(n=>n.classList.remove("active")),B.style.display="block"});R.addEventListener("change",n=>{const e=n.target.files[0];if(!e){l=null;return}const t=new FileReader;t.onload=s=>{try{l=JSON.parse(s.target.result),L.removeAttribute("disabled")}catch{l=null,alert("Invalid JSON file.")}},t.readAsText(e)});L.addEventListener("click",()=>{if(l===null)return;let n=1;for(let[e,t]of Object.entries(l))c.get(e)!==null&&(e=Date.now()+n,n++),c.set(e,t);location.reload()});J.addEventListener("click",()=>{const n={};for(let r of c.keys())n[r]=c.get(r);const e=JSON.stringify(n,null,2),t=new Blob([e],{type:"application/json"}),s=URL.createObjectURL(t),o=document.createElement("a");o.href=s,o.download=`mathbook-${Date.now()}.json`,o.click(),URL.revokeObjectURL(s)});T.addEventListener("click",()=>{Z.showModal()});G.addEventListener("click",n=>{n.preventDefault(),c.clear(),location.reload()});g.click();
