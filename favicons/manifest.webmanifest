@@ -1,14 +1,15 @@
 {
   "name": "Mathbook",
   "short_name": "Mathbook",
-  "description": null,
+  "description": "A simple, interactive math notebook",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",
   "orientation": "any",
-  "start_url": "/?homescreen=1",
-  "background_color": "#fff",
-  "theme_color": "#fff",
+  "scope": "/mathbook/",
+  "start_url": "/mathbook/",
+  "background_color": "#ffffff",
+  "theme_color": "#007bff",
   "icons": [
     {
       "src": "/favicons/android-chrome-36x36.png",
