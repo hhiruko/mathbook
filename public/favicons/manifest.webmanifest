@@ -8,8 +8,8 @@
   "orientation": "any",
   "scope": "/mathbook/",
   "start_url": "/mathbook/",
-  "background_color": "#ffffff",
-  "theme_color": "#007bff",
+  "background_color": "#fff",
+  "theme_color": "#fff",
   "icons": [
     {
       "src": "/favicons/android-chrome-36x36.png",
