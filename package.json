@@ -5,8 +5,9 @@
   "scripts": {
     "test": "echo \"No tests yet.\"",
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build && npm run generate-sw",
+    "preview": "vite preview",
+    "generate-sw": "node scripts/generate-sw.mjs"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   },
   "homepage": "https://github.com/hhiruko/mathbook#readme",
   "devDependencies": {
+    "glob": "^11.0.3",
     "vite": "^6.3.5"
   },
   "dependencies": {

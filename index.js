@@ -2,6 +2,12 @@ import { Notebook } from "./src/Notebook";
 import { Storage } from "./src/Storage";
 import { createElement, FilePlus2, BookText, FolderGit2, Boxes, Download, Trash2 } from 'lucide';
 
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+    });
+}
+
 const storage = Storage;
 const notebook = new Notebook(storage);
 let importJson = null;
