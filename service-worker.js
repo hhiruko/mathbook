@@ -76,7 +76,27 @@ self.addEventListener('install', event => {
   "/cdn/water.min.css",
   "/cdn/mathlive.js",
   "/assets/index-BgOqCDO9.js",
-  "/assets/index-BbJvx286.css"
+  "/assets/index-BbJvx286.css",
+  "/cdn/fonts/KaTeX_Typewriter-Regular.woff2",
+  "/cdn/fonts/KaTeX_Size4-Regular.woff2",
+  "/cdn/fonts/KaTeX_Size3-Regular.woff2",
+  "/cdn/fonts/KaTeX_Size2-Regular.woff2",
+  "/cdn/fonts/KaTeX_Size1-Regular.woff2",
+  "/cdn/fonts/KaTeX_Script-Regular.woff2",
+  "/cdn/fonts/KaTeX_SansSerif-Regular.woff2",
+  "/cdn/fonts/KaTeX_SansSerif-Italic.woff2",
+  "/cdn/fonts/KaTeX_SansSerif-Bold.woff2",
+  "/cdn/fonts/KaTeX_Math-Italic.woff2",
+  "/cdn/fonts/KaTeX_Math-BoldItalic.woff2",
+  "/cdn/fonts/KaTeX_Main-Regular.woff2",
+  "/cdn/fonts/KaTeX_Main-Italic.woff2",
+  "/cdn/fonts/KaTeX_Main-BoldItalic.woff2",
+  "/cdn/fonts/KaTeX_Main-Bold.woff2",
+  "/cdn/fonts/KaTeX_Fraktur-Regular.woff2",
+  "/cdn/fonts/KaTeX_Fraktur-Bold.woff2",
+  "/cdn/fonts/KaTeX_Caligraphic-Regular.woff2",
+  "/cdn/fonts/KaTeX_Caligraphic-Bold.woff2",
+  "/cdn/fonts/KaTeX_AMS-Regular.woff2"
 ]);
     })
   );
