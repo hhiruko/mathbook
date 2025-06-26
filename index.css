@@ -39,6 +39,7 @@ math-field {
     z-index: 10;
     border-bottom: 1px solid var(--border);
     width: 100%;
+    min-height: 84px;
 }
 
 #add-button, #home-button, #trigger-delete-page-dialog {
@@ -62,6 +63,8 @@ math-field {
     padding: 8px;
     display: flex;
     justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .page.active {
