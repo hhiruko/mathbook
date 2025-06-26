@@ -1,8 +1,5 @@
 
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open('v1').then(cache => {
-      return cache.addAll([
+const assets = [
   "/index.html",
   "/favicons/yandex-browser-manifest.json",
   "/favicons/yandex-browser-50x50.png",
@@ -97,7 +94,18 @@ self.addEventListener('install', event => {
   "/cdn/fonts/KaTeX_Caligraphic-Regular.woff2",
   "/cdn/fonts/KaTeX_Caligraphic-Bold.woff2",
   "/cdn/fonts/KaTeX_AMS-Regular.woff2"
-]);
+];
+
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open('v1').then(async cache => {
+      for (const asset of assets) {
+        try {
+          await cache.add(asset);
+        } catch (e) {
+          console.error('❌ Failed to cache:', asset, e);
+        }
+      }
     })
   );
 });
