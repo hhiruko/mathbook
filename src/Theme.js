@@ -47,10 +47,10 @@ export class Theme {
     #switchTheme(theme) {
         const element = document.getElementById(Theme.THEME_KEY);
         switch(theme) {
-            case Theme.LIGHT: element.setAttribute('href', '/mathbook/cdn/water.light.css'); break;
-            case Theme.DARK: element.setAttribute('href', '/mathbook/cdn/water.dark.css'); break;
+            case Theme.LIGHT: element.setAttribute('href', '/mathbook/cdn/water.light.min.css'); break;
+            case Theme.DARK: element.setAttribute('href', '/mathbook/cdn/water.dark.min.css'); break;
             case Theme.SYSTEM:
-            default: element.setAttribute('href', '/mathbook/cdn/water.system.css');
+            default: element.setAttribute('href', '/mathbook/cdn/water.system.min.css');
         }
     }
 }
