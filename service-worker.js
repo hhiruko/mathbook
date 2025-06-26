@@ -74,7 +74,7 @@ const assets = [
   "/mathbook/cdn/water.light.css",
   "/mathbook/cdn/water.dark.css",
   "/mathbook/cdn/mathlive.js",
-  "/mathbook/assets/index-DDAC2eCt.js",
+  "/mathbook/assets/index-K5x-WN58.js",
   "/mathbook/assets/index-BsYJ2Uc2.css",
   "/mathbook/cdn/fonts/KaTeX_Typewriter-Regular.woff2",
   "/mathbook/cdn/fonts/KaTeX_Size4-Regular.woff2",
