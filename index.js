@@ -4,7 +4,7 @@ import { Storage } from "./src/Storage";
 import { createElement, FilePlus2, BookText, FolderGit2, Boxes, Download, Trash2 } from 'lucide';
 import { Transfer } from "./src/Transfer";
 
-if ('serviceWorker' in navigator) {
+if (import.meta.env.PROD && 'serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('/mathbook/service-worker.js');
     });
