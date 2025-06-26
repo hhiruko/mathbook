@@ -1,8 +1,10 @@
 import { glob } from 'glob';
 import fs from 'fs';
 
+const base = '/mathbook/';
 const files = await glob('dist/**/*.*');
-const assets = files.map(f => '/mathbook/' + f.replace(/^dist[\\/]/, '').replace(/\\/g, '/'));
+const assets = files.map(f => base + f.replace(/^dist[\\/]/, '').replace(/\\/g, '/'));
+assets.push(base);
 
 const serviceWorker = `
 const assets = ${JSON.stringify(assets, null, 2)};
