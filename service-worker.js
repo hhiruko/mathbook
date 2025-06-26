@@ -75,7 +75,7 @@ self.addEventListener('install', event => {
   "/favicons/android-chrome-144x144.png",
   "/cdn/water.min.css",
   "/cdn/mathlive.js",
-  "/assets/index-DEy5X1ze.js",
+  "/assets/index-BgOqCDO9.js",
   "/assets/index-BbJvx286.css"
 ]);
     })
