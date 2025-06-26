@@ -14,7 +14,6 @@ export class Theme {
 
     toggle() {
         const themes = [Theme.SYSTEM, Theme.DARK, Theme.LIGHT];
-        console.log(themes);
         let index = themes.findIndex(t => t === this.#getTheme());
         if(index === 2) {
             index = 0;
