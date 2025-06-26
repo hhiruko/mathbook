@@ -5,10 +5,18 @@ const files = await glob('dist/**/*.*');
 const assets = files.map(f => '/' + f.replace(/^dist[\\/]/, '').replace(/\\/g, '/'));
 
 const serviceWorker = `
+const assets = ${JSON.stringify(assets, null, 2)};
+
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open('v1').then(cache => {
-      return cache.addAll(${JSON.stringify(assets, null, 2)});
+    caches.open('v1').then(async cache => {
+      for (const asset of assets) {
+        try {
+          await cache.add(asset);
+        } catch (e) {
+          console.error('❌ Failed to cache:', asset, e);
+        }
+      }
     })
   );
 });
