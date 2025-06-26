@@ -29,7 +29,7 @@ export class Page {
         });
 
         const value = this.storage.get(this.number);
-        if(value !== null){
+        if(value){
             this.writer.value = value;
         } else {
             this.writer.value = '\\displaylines{\\phantom{0}}';
