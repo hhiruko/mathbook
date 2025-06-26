@@ -93,7 +93,8 @@ const assets = [
   "/mathbook/cdn/fonts/KaTeX_Fraktur-Bold.woff2",
   "/mathbook/cdn/fonts/KaTeX_Caligraphic-Regular.woff2",
   "/mathbook/cdn/fonts/KaTeX_Caligraphic-Bold.woff2",
-  "/mathbook/cdn/fonts/KaTeX_AMS-Regular.woff2"
+  "/mathbook/cdn/fonts/KaTeX_AMS-Regular.woff2",
+  "/mathbook/"
 ];
 
 self.addEventListener('install', event => {
