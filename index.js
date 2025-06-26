@@ -1,6 +1,8 @@
 import { Notebook } from "./src/Notebook";
+import { NotebookStorage } from "./src/NotebookStorage";
 import { Storage } from "./src/Storage";
 import { createElement, FilePlus2, BookText, FolderGit2, Boxes, Download, Trash2 } from 'lucide';
+import { Transfer } from "./src/Transfer";
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
@@ -9,7 +11,9 @@ if ('serviceWorker' in navigator) {
 }
 
 const storage = Storage;
-const notebook = new Notebook(storage);
+const notebookStorage = NotebookStorage;
+const transfer = new Transfer(notebookStorage);
+const notebook = new Notebook(notebookStorage);
 let importJson = null;
 
 const addButton = document.getElementById('add-button');
@@ -125,37 +129,12 @@ importButton.addEventListener('click', () => {
     if(importJson === null){
         return;
     }
-
-    let ms = 1;
-    for(let [key, value] of Object.entries(importJson)) {
-        if(storage.get(key) !== null){
-            key = Date.now() + ms;
-            ms++;
-        }
-
-        storage.set(key, value);
-    }
-
+    transfer.import(importJson);
     location.reload();
 });
 
 exportButton.addEventListener('click', () => {
-    const exportJson = {};
-
-    for(let key of storage.keys()){
-        exportJson[key] = storage.get(key);
-    }
-
-    const jsonString = JSON.stringify(exportJson, null, 2);
-    const blob = new Blob([jsonString], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `mathbook-${Date.now()}.json`;
-    a.click();
-
-    URL.revokeObjectURL(url);
+    transfer.export();
 });
 
 triggerDeleteDialogButton.addEventListener('click', () => {
@@ -164,7 +143,7 @@ triggerDeleteDialogButton.addEventListener('click', () => {
 
 deleteButton.addEventListener('click', (e) => {
     e.preventDefault();
-    storage.clear();
+    notebookStorage.clear();
     location.reload();
 });
 
@@ -174,7 +153,7 @@ triggerDeletePageDialogButton.addEventListener('click', () => {
 
 deletePageButton.addEventListener('click', (e) => {
     e.preventDefault();
-    storage.remove(notebook.page.number);
+    notebookStorage.remove(notebook.page.number);
     location.reload();
 });
 

@@ -1,8 +1,7 @@
-import { Storage } from "./Storage"
 import { Page } from "./Page";
 
 export class Notebook {
-    constructor(storage = Storage) {
+    constructor(storage) {
         this.storage = storage;
         this.pages = storage.keys();
         this.page = new Page(storage);
