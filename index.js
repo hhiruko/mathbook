@@ -3,6 +3,7 @@ import { NotebookStorage } from "./src/NotebookStorage";
 import { Storage } from "./src/Storage";
 import { createElement, FilePlus2, BookText, FolderGit2, Boxes, Download, Trash2 } from 'lucide';
 import { Transfer } from "./src/Transfer";
+import { Theme } from "./src/Theme";
 
 if (import.meta.env.PROD && 'serviceWorker' in navigator) {
     window.addEventListener('load', () => {
@@ -11,6 +12,7 @@ if (import.meta.env.PROD && 'serviceWorker' in navigator) {
 }
 
 const storage = Storage;
+const theme = new Theme(storage);
 const notebookStorage = NotebookStorage;
 const transfer = new Transfer(notebookStorage);
 const notebook = new Notebook(notebookStorage);
@@ -35,6 +37,7 @@ const deleteButton = document.getElementById('delete');
 const triggerDeletePageDialogButton = document.getElementById('trigger-delete-page-dialog');
 const deletePageDialog = document.getElementById('delete-page-dialog');
 const deletePageButton = document.getElementById('delete-page');
+const themeButton = document.getElementById('theme-button');
 
 const addIcon = createElement(FilePlus2);
 const homeIcon = createElement(BookText);
@@ -55,6 +58,7 @@ dependenciesSpan.appendChild(dependenciesIcon);
 importExportSpan.appendChild(importExportIcon);
 deleteSpan.appendChild(deleteIcon);
 triggerDeletePageDialogButton.appendChild(deletePageIcon);
+themeButton.appendChild(createElement(theme.getIcon()));
 
 const addPage = (number, index) => {
     const page = document.createElement('button');
@@ -155,6 +159,12 @@ deletePageButton.addEventListener('click', (e) => {
     e.preventDefault();
     notebookStorage.remove(notebook.page.number);
     location.reload();
+});
+
+themeButton.addEventListener('click', () => {
+    theme.toggle();
+    themeButton.innerHTML = '';
+    themeButton.appendChild(createElement(theme.getIcon()));
 });
 
 homeButton.click();

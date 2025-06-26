@@ -99,3 +99,8 @@ math-field {
 #trigger-delete-page-dialog {
     display: none;
 }
+
+#theme-button {
+    all: unset;
+    float: right;
+}
