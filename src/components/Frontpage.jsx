@@ -73,8 +73,7 @@ export const Frontpage = forwardRef(({ notebook }, ref) => {
         <>
             <div id="frontpage" ref={ref}>
                 <h1>
-                    Mathbook
-                    <a id="github-link" href="https://github.com/hhiruko/mathbook"> <FolderGit2 /></a>
+                    Mathbook <a id="github-link" href="https://github.com/hhiruko/mathbook"><FolderGit2 /></a>
                     <button id="theme-button" ref={themeButtonRef} onClick={handleThemeButton}><ThemeIcon /></button>
                 </h1>
                 <p>Mathbook is a simple, interactive notebook for writing, organizing, and managing math notes and formulas, with a clean, responsive interface and page-based navigation.</p>
