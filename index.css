@@ -22,7 +22,7 @@ math-field {
     color: var(--text-main);
 }
 
-#editor {
+#main {
     min-height: var(--min-height);
 }
 
@@ -30,7 +30,7 @@ math-field {
     display: none;
 }
 
-#notebook {
+#navbar {
     display: flex;
     gap: 20px;
     position: sticky;
@@ -42,7 +42,7 @@ math-field {
     min-height: 84px;
 }
 
-#add-button, #home-button, #trigger-delete-page-dialog {
+#add-page-button, #frontpage-button, #delete-page-dialog-trigger-button {
     margin-top: auto;
     margin-bottom: auto;
     padding-right: 12px;
@@ -91,12 +91,12 @@ math-field {
     justify-content: center;
 }
 
-#delete, #trigger-delete-dialog, #delete-page, #trigger-delete-page-dialog {
+#delete-button, #delete-dialog-trigger-button, #delete-page-button, #delete-page-dialog-trigger-button {
     background-color: var(--danger);
     color: white;
 }
 
-#trigger-delete-page-dialog {
+#delete-page-dialog-trigger-button {
     display: none;
 }
 

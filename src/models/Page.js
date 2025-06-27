@@ -1,6 +1,9 @@
 export class Page {
     constructor(storage) {
         this.storage = storage;
+    }
+
+    initWriter() {
         this.writer = document.getElementById('writer');
         this.writer.smartMode = 'on';
         const keybindings = [

@@ -1,4 +1,4 @@
-import { SunMoon, Moon, Sun } from 'lucide';
+import { SunMoon, Moon, Sun } from 'lucide-preact';
 
 export class Theme {
     static THEME_KEY = 'theme-preference';

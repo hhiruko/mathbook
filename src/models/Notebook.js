@@ -8,6 +8,10 @@ export class Notebook {
         this.count = this.pages.length;
     }
 
+    load() {
+        this.page.initWriter();
+    }
+
     add() {
         this.page.set();
         return this.page.number;
