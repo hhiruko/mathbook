@@ -31,13 +31,11 @@ A simple math notebook for writing and exploring mathematical equations.
     ```bash
     npm install
     ```
-2. Update your `.env` file as needed.
-3. (Optional) Place your `icon.svg` inside `public/favicons/` and reference its name in `.env`.
-4. Start dev server:
+2. Start dev server:
     ```bash
     npm run dev
     ```
-5. Build production-ready static site:
+3. Build production-ready static site:
     ```bash
     npm run build
     ```
