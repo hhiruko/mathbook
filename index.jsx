@@ -5,7 +5,7 @@ document.title = import.meta.env.VITE_APP_NAME;
 
 if (import.meta.env.PROD && 'serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register(import.meta.env.VITE_APP_PATH + '/service-worker.js');
+        navigator.serviceWorker.register('service-worker.js');
     });
 }
 

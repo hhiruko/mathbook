@@ -18,7 +18,7 @@ const serviceWorker = `
     const assets = ${JSON.stringify(assets, null, 2)};
     const CACHE_NAME = '${cacheName}';
 
-    self.addEventistener('install', event => {
+    self.addEventListener('install', event => {
         event.waitUntil(
             caches.open(CACHE_NAME).then(async cache => {
                 for(const asset of assets) {
@@ -32,7 +32,7 @@ const serviceWorker = `
         );
     });
 
-    self.addEventistener('fetch', event => {
+    self.addEventListener('fetch', event => {
         event.respondWith(
             caches.match(event.request).then(response => {
                 if(response) return response;
