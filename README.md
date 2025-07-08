@@ -1,8 +1,9 @@
-# Static PWA Template
+# Mathbook
 
-A lightweight, static **Progressive Web App (PWA)** template for quickly building and deploying offline-capable web apps.
+A simple math notebook for writing and exploring mathematical equations.
 
 ### 🚀 Core Features
+- Full CRUD functionality for managing math notes and formulas
 - Offline support via caching
 - Build-time manifest & icon generation (just provide one `.svg`)
 - Light/Dark/System theme preference support
@@ -20,6 +21,7 @@ A lightweight, static **Progressive Web App (PWA)** template for quickly buildin
 - [Favicons](https://github.com/itgalaxy/favicons)
 - [Lucide-preact](https://lucide.dev/guide/packages/lucide-preact)
 - [Water.css](https://watercss.kognise.dev/)
+- [Mathfield](https://cortexjs.io/mathfield/)
 
 ---
 
