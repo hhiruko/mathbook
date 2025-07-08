@@ -1,6 +1,12 @@
 
     const assets = [
   "/mathbook/index.html",
+  "/mathbook/cdn/water.system.min.css",
+  "/mathbook/cdn/water.light.min.css",
+  "/mathbook/cdn/water.dark.min.css",
+  "/mathbook/cdn/mathlive.js",
+  "/mathbook/assets/index-SzE1qI26.css",
+  "/mathbook/assets/index-DHxbwFXZ.js",
   "/mathbook/favicons/yandex-browser-manifest.json",
   "/mathbook/favicons/yandex-browser-50x50.png",
   "/mathbook/favicons/mstile-70x70.png",
@@ -71,12 +77,6 @@
   "/mathbook/favicons/android-chrome-256x256.png",
   "/mathbook/favicons/android-chrome-192x192.png",
   "/mathbook/favicons/android-chrome-144x144.png",
-  "/mathbook/cdn/water.system.min.css",
-  "/mathbook/cdn/water.light.min.css",
-  "/mathbook/cdn/water.dark.min.css",
-  "/mathbook/cdn/mathlive.js",
-  "/mathbook/assets/index-SzE1qI26.css",
-  "/mathbook/assets/index-DHxbwFXZ.js",
   "/mathbook/cdn/fonts/KaTeX_Typewriter-Regular.woff2",
   "/mathbook/cdn/fonts/KaTeX_Size4-Regular.woff2",
   "/mathbook/cdn/fonts/KaTeX_Size3-Regular.woff2",
@@ -99,7 +99,7 @@
   "/mathbook/cdn/fonts/KaTeX_AMS-Regular.woff2",
   "/mathbook/"
 ];
-    const CACHE_NAME = 'v2025-07-08T11:48:50.001Z';
+    const CACHE_NAME = 'v2025-07-08T11:49:57.685Z';
 
     self.addEventistener('install', event => {
         event.waitUntil(
