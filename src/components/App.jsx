@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'preact/hooks';
-import { NotebookStorage } from "../models/NotebookStorage";
+import { CollectionStorage } from "../models/CollectionStorage";
 import { Notebook } from "../models/Notebook";
 import { Frontpage } from './Frontpage';
 import { Navbar } from "./Navbar";
@@ -8,7 +8,7 @@ export function App() {
     const writerRef = useRef(null);
     const frontpageRef = useRef(null);
 
-    const notebookStorage = NotebookStorage;
+    const notebookStorage = new CollectionStorage('notebook-pages');
     const notebook = new Notebook(notebookStorage);
 
     useEffect(() => {

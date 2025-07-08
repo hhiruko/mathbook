@@ -28,7 +28,7 @@ export class Transfer {
         
         const a = document.createElement("a");
         a.href = url;
-        a.download = `mathbook-${Date.now()}.json`;
+        a.download = `${Date.now()}.json`;
         a.click();
         
         URL.revokeObjectURL(url);

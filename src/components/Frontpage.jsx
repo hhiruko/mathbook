@@ -1,22 +1,16 @@
-import { render } from 'preact';
 import { useRef } from 'preact/hooks';
 import { forwardRef } from 'preact/compat';
-import { Storage } from "../models/Storage";
-import { Theme } from "../models/Theme";
 import { Transfer } from "../models/Transfer"
 import { FolderGit2, FilePlus2, BookText, Download, Trash2 } from "lucide-preact";
 import { Dependencies } from './Dependencies';
+import { ThemeButton } from './ThemeButton';
 
 export const Frontpage = forwardRef(({ notebook }, ref) => {
-    const storage = Storage;
-    const theme = new Theme(storage);
     const transfer = new Transfer(notebook.storage);
 
     const importButtonRef = useRef(null);
     const deleteDialogRef = useRef(null);
     const themeButtonRef = useRef(null);
-
-    const ThemeIcon = theme.getIcon();
 
     let importJson = null;
 
@@ -62,19 +56,12 @@ export const Frontpage = forwardRef(({ notebook }, ref) => {
         location.reload();
     };
 
-    const handleThemeButton = () => {
-        theme.toggle();
-        themeButtonRef.current.innerHTML = '';
-        const ThemeIcon = theme.getIcon();
-        render(<ThemeIcon />, themeButtonRef.current);
-    };
-
     return (
         <>
             <div id="frontpage" ref={ref}>
                 <h1>
                     Mathbook <a id="github-link" href="https://github.com/hhiruko/mathbook"><FolderGit2 /></a>
-                    <button id="theme-button" ref={themeButtonRef} onClick={handleThemeButton}><ThemeIcon /></button>
+                    <ThemeButton />
                 </h1>
                 <p>Mathbook is a simple, interactive notebook for writing, organizing, and managing math notes and formulas, with a clean, responsive interface and page-based navigation.</p>
                 <blockquote>All your data is saved in your browser. If you clear the cache, your data will be lost.</blockquote>

@@ -48,6 +48,12 @@ export function Dependencies() {
                         <td>npm</td>
                         <td>File matching utility</td>
                     </tr>
+                    <tr>
+                        <td><a href="https://github.com/itgalaxy/favicons">Favicons</a></td>
+                        <td>^7.2.0</td>
+                        <td>npm</td>
+                        <td>Favicons and webmanifest tool</td>
+                    </tr>
                 </tbody>
             </table>
         </>
