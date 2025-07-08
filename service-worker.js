@@ -1,5 +1,5 @@
 
-const assets = [
+    const assets = [
   "/mathbook/index.html",
   "/mathbook/favicons/yandex-browser-manifest.json",
   "/mathbook/favicons/yandex-browser-50x50.png",
@@ -9,6 +9,7 @@ const assets = [
   "/mathbook/favicons/mstile-150x150.png",
   "/mathbook/favicons/mstile-144x144.png",
   "/mathbook/favicons/manifest.webmanifest",
+  "/mathbook/favicons/icon.svg",
   "/mathbook/favicons/favicon.ico",
   "/mathbook/favicons/favicon-48x48.png",
   "/mathbook/favicons/favicon-32x32.png",
@@ -74,8 +75,8 @@ const assets = [
   "/mathbook/cdn/water.light.min.css",
   "/mathbook/cdn/water.dark.min.css",
   "/mathbook/cdn/mathlive.js",
-  "/mathbook/assets/index-oYwm2SUc.js",
   "/mathbook/assets/index-SzE1qI26.css",
+  "/mathbook/assets/index-DHxbwFXZ.js",
   "/mathbook/cdn/fonts/KaTeX_Typewriter-Regular.woff2",
   "/mathbook/cdn/fonts/KaTeX_Size4-Regular.woff2",
   "/mathbook/cdn/fonts/KaTeX_Size3-Regular.woff2",
@@ -98,30 +99,45 @@ const assets = [
   "/mathbook/cdn/fonts/KaTeX_AMS-Regular.woff2",
   "/mathbook/"
 ];
+    const CACHE_NAME = 'v2025-07-08T11:45:09.372Z';
 
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open('v1').then(async cache => {
-      for (const asset of assets) {
-        try {
-          await cache.add(asset);
-        } catch (e) {
-          console.error('❌ Failed to cache:', asset, e);
-        }
-      }
-    })
-  );
-});
+    self.addEventistener('install', event => {
+        event.waitUntil(
+            caches.open(CACHE_NAME).then(async cache => {
+                for(const asset of assets) {
+                    try {
+                        await cache.add(asset);
+                    } catch (e) {
+                        console.error('❌ Failed to cache:', asset, e);
+                    }
+                }
+            })
+        );
+    });
 
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request).then(response => {
-      if (response) return response;
-      return fetch(event.request).catch(() => {
-        if (event.request.mode === 'navigate') {
-          return caches.match('/mathbook/index.html');
-        }
-      });
-    })
-  );
-});
+    self.addEventistener('fetch', event => {
+        event.respondWith(
+            caches.match(event.request).then(response => {
+                if(response) return response;
+                return fetch(event.request).catch(() => {
+                    if(event.request.mode === 'navigate') {
+                        return caches.match('/mathbook/index.html');
+                    }
+                });
+            })
+        );
+    });
+
+    self.addEventListener('activate', event => {
+        event.waitUntil(
+            caches.keys().then(cacheNames => {
+                return Promise.all(
+                    cacheNames.map(cacheName => {
+                        if (cacheName !== CACHE_NAME) {
+                            return caches.delete(cacheName);
+                        }
+                    })
+                );
+            })
+        );
+    });
