@@ -76,7 +76,7 @@
   "/mathbook/cdn/water.dark.min.css",
   "/mathbook/cdn/mathlive.js",
   "/mathbook/assets/index-SzE1qI26.css",
-  "/mathbook/assets/index-POiR2vuj.js",
+  "/mathbook/assets/index-DRK1JCVc.js",
   "/mathbook/cdn/fonts/KaTeX_Typewriter-Regular.woff2",
   "/mathbook/cdn/fonts/KaTeX_Size4-Regular.woff2",
   "/mathbook/cdn/fonts/KaTeX_Size3-Regular.woff2",
@@ -99,7 +99,7 @@
   "/mathbook/cdn/fonts/KaTeX_AMS-Regular.woff2",
   "/mathbook/"
 ];
-    const CACHE_NAME = 'v2025-07-09T08:04:03.652Z';
+    const CACHE_NAME = 'v2025-07-09T09:52:07.902Z';
 
     self.addEventListener('install', event => {
         self.skipWaiting();
