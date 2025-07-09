@@ -19,6 +19,7 @@ const serviceWorker = `
     const CACHE_NAME = '${cacheName}';
 
     self.addEventListener('install', event => {
+        self.skipWaiting();
         event.waitUntil(
             caches.open(CACHE_NAME).then(async cache => {
                 for(const asset of assets) {
@@ -46,6 +47,7 @@ const serviceWorker = `
     });
 
     self.addEventListener('activate', event => {
+        self.clients.claim();
         event.waitUntil(
             caches.keys().then(cacheNames => {
                 return Promise.all(
