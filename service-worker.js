@@ -99,9 +99,10 @@
   "/mathbook/cdn/fonts/KaTeX_AMS-Regular.woff2",
   "/mathbook/"
 ];
-    const CACHE_NAME = 'v2025-07-08T12:07:27.746Z';
+    const CACHE_NAME = 'v2025-07-09T08:04:03.652Z';
 
     self.addEventListener('install', event => {
+        self.skipWaiting();
         event.waitUntil(
             caches.open(CACHE_NAME).then(async cache => {
                 for(const asset of assets) {
@@ -129,6 +130,7 @@
     });
 
     self.addEventListener('activate', event => {
+        self.clients.claim();
         event.waitUntil(
             caches.keys().then(cacheNames => {
                 return Promise.all(
