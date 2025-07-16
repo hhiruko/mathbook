@@ -1,6 +1,8 @@
 # Mathbook
 
-A simple math notebook for writing and exploring mathematical equations.
+A simple math notebook PWA for writing and exploring mathematical equations.
+
+**Live**: [hhiruko.github.io/mathbook](https://hhiruko.github.io/mathbook)
 
 ### 🚀 Core Features
 - Full CRUD functionality for managing math notes and formulas
