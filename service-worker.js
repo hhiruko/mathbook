@@ -97,7 +97,7 @@
   "/mathbook/cdn/fonts/KaTeX_AMS-Regular.woff2",
   "/mathbook/"
 ];
-    const CACHE_NAME = 'v2025-09-05T07:18:18.864Z';
+    const CACHE_NAME = 'v2025-09-05T07:27:23.244Z';
 
     self.addEventListener('install', event => {
         self.skipWaiting();
