@@ -71,10 +71,9 @@
   "/mathbook/favicons/android-chrome-256x256.png",
   "/mathbook/favicons/android-chrome-192x192.png",
   "/mathbook/favicons/android-chrome-144x144.png",
-  "/mathbook/cdn/water.min.css",
   "/mathbook/cdn/mathlive.js",
-  "/mathbook/assets/index-SzE1qI26.css",
-  "/mathbook/assets/index-DXqChv_H.js",
+  "/mathbook/assets/index-COn-ncWR.js",
+  "/mathbook/assets/index-BclyZfBJ.css",
   "/mathbook/cdn/fonts/KaTeX_Typewriter-Regular.woff2",
   "/mathbook/cdn/fonts/KaTeX_Size4-Regular.woff2",
   "/mathbook/cdn/fonts/KaTeX_Size3-Regular.woff2",
@@ -97,7 +96,7 @@
   "/mathbook/cdn/fonts/KaTeX_AMS-Regular.woff2",
   "/mathbook/"
 ];
-    const CACHE_NAME = 'v2025-09-05T07:27:23.244Z';
+    const CACHE_NAME = 'v2025-09-08T06:07:11.384Z';
 
     self.addEventListener('install', event => {
         self.skipWaiting();
