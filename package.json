@@ -35,6 +35,7 @@
     "vite": "^6.3.5"
   },
   "dependencies": {
+    "@hhiruko/water.css": "^3.0.2",
     "favicons": "^7.2.0",
     "lucide-preact": "^0.523.0",
     "preact": "^10.26.9"

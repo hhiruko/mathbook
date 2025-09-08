@@ -19,9 +19,9 @@ export function Dependencies() {
                         <td>Visual math input field</td>
                     </tr>
                     <tr>
-                        <td><a href="https://watercss.kognise.dev/">Water.css</a></td>
-                        <td>2.1.1</td>
-                        <td>jsdelivr</td>
+                        <td><a href="https://github.com/hhiruko/water.css">Water.css</a></td>
+                        <td>3.0.2</td>
+                        <td>npm</td>
                         <td>Tiny, classless CSS framework</td>
                     </tr>
                     <tr>

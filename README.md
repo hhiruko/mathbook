@@ -22,7 +22,7 @@ A simple math notebook PWA for writing and exploring mathematical equations.
 - [Glob](https://github.com/isaacs/node-glob)
 - [Favicons](https://github.com/itgalaxy/favicons)
 - [Lucide-preact](https://lucide.dev/guide/packages/lucide-preact)
-- [Water.css](https://watercss.kognise.dev/)
+- [Water.css](https://github.com/hhiruko/water.css)
 - [Mathfield](https://cortexjs.io/mathfield/)
 
 ---
